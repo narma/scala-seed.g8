@@ -4,12 +4,12 @@ lazy val root = (project in file(".")).
   settings(
     inThisBuild(List(
       organization := "com.example",
-      scalaVersion := "2.12.4",
+      scalaVersion := "2.12.6",
       version      := "0.1.0-SNAPSHOT"
     )),
-    name := "Hello",
+    name := "$name$",
     libraryDependencies ++= {
       import Dependencies._
-      akka ++ cats
+      core ++ logging ++ db ++ test
     }
   )
